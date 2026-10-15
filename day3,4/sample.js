@@ -67,3 +67,35 @@ const {
 } = user;
 console.log(namee);
 console.log(city);
+
+// spread object
+
+const original ={
+  name:"edwin",
+  age:21
+};
+
+const updated ={
+  ...original,
+  age:22,
+  city:"chennai"
+};
+
+console.log(original);
+console.log(updated);
+
+//  ||
+const username =null;
+const age1 =0;
+const city2 = undefined;
+console.log(username??"guest");
+console.log(age1|| 18);
+console.log(city2||"chennai");
+
+// ??
+const username1 =null;
+const age2 =10;
+const city3 = undefined;
+console.log(username||"guest");
+console.log(age1|| 18);
+console.log(city2||"chennai");
