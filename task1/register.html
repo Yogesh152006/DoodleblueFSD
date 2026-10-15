@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Events Register </title>
+</head>
+<body>
+    <header>
+        <div id="top">
+            <img src="images/graduation-cap-icon.webp" alt="graduation cap ">
+            <h1>Campus Events</h1>
+            <ul>
+                <li> <a href="home.html"> Home</a></li>
+                <li> <a href="about.html"> About </a></li>
+                <li> <a href="events.html"> Events</a></li>
+                <li> <a href="schedule.html"> Schedule</a></li>
+                <li> <a href="register.html"> Register</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="eventreg">
+        <h1>Event Registration </h1>
+        <p>Fill the form for the upcoming Events </p>
+        <div id="regform">
+            <form>
+                <label for="fullname"> Full name</label>
+                <input type="text" id="fullname" name="fullname" minlength="2" maxlength="60" required>
+
+                <label for="email" > Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone"> Phone Number</label>
+                <input type="number" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Enter a 10 digit number" required >
+
+                <label for="event"> Choose The Event</label>
+                    <select name="course" id="eventss" required>
+                        <option value=""> Choose the Event </option>
+                        <option value="tech"> Tech fest 2026 </option>
+                        <option value="cult"> Culturals</option>
+                        <option value="sport"> Sports Day</option>
+                        <option value="aiwork"> AI Workshop</option>
+                        <option value="photos"> Photography Contest </option>
+                        <option value="talk"> Carrer Guidence Talks</option>
+                    </select>
+
+                <fieldset>
+                    <legend>Terms and Condition</legend>
+                    <label for="terms">
+                        <input type="checkbox" id="terms" name="terms" value="accept" >
+                    </label>
+                </fieldset>
+
+                <button type="submit"> Register</button>
+
+
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div id="bottom">
+            <img src="images/graduation-cap-icon.webp" alt="" width="50" height="50">
+            <h4>Campus Events</h4>
+            <p> Bringing students together through learning , creativity and collabration </p>
+
+            <h5> Quick Links</h5>
+            <ul>
+                <li> <a href="home.html"> Home</a></li>
+                <li> <a href="about.html"> About </a></li>
+                <li> <a href="events.html"> Events</a></li>
+                <li> <a href="schedule.html"> Schedule</a></li>
+                <li> <a href="register.html"> Register</a></li>
+            </ul>
+
+            <h4>Follow Us </h4>
+            <ul id="icons">
+                <a href="https://www.facebook.com/">𝐟</a>
+                <a href="https://www.instagram.com/">🅾</a>
+                <a href="https://in.linkedin.com/">🇮🇳</a>
+                <a href="https://www.youtube.com/">▷</a>
+            </ul>
+           
+            <br>
+
+            <hr>
+
+            <br>
+            <p> © 2026 Campus Events All rights reserved </p>
+        </div>
+    </footer>
+</body>
+</html>
