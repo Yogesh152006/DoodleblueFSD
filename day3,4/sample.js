@@ -29,3 +29,41 @@ let res=nu.reduce((total,num)=>{
   return total+num;
 });
 console.log(res);
+
+
+//object creation
+
+const emp ={
+  name: "Govinda",
+  salary : 20000
+}
+
+console.log(emp.name);
+
+emp.salary=34000
+emp.city="Chennai"
+console.log(emp.name)
+console.log(emp)
+
+//object deconstrution
+const stu1={
+  name:"Govinda",
+  age:21,
+  course:"aiml"
+}
+
+console.log(stu1.name);
+const{name,age,course}= stu1;
+console.log(name);
+
+//object deconstrution
+
+const user={
+  firstname:"priya"
+};
+const {
+  firstname:namee,
+  city="Avadi"
+} = user;
+console.log(namee);
+console.log(city);
