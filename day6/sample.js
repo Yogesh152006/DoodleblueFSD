@@ -46,7 +46,66 @@
 // console.log("Registration recived");
 
 
-console.log("start");
-setTimeout(()=> console.log("Timer"),0);
-Promise.resolve().then(()=> console.log("Promise"));
-console.log("End")
+// console.log("start");
+// setTimeout(()=> console.log("Timer"),0);
+// Promise.resolve().then(()=> console.log("Promise"));
+// console.log("End")
+
+
+
+// bank task 
+
+function withdrawmoney(balance,amount){
+    return new Promise ((resolve,reject)=> {
+        if(amount <= balance){
+            resolve("Withdrawel succesfully done ")
+        }
+        else{
+            reject("Insufficent Balance ")
+        }
+    },2000);
+}
+
+async function checkmoney(balance,amount){
+try{
+    const a = await withdrawmoney(balance,amount);
+    console.log(a);
+}
+catch(error){
+    console.log(error);
+}
+finally{
+    console.log("transcation completed , tq visit again ");
+}
+}
+
+checkmoney(1000,5000);
+
+
+
+// age and movie age check 
+
+
+
+function checkage(age,rating){
+    return new Promise ((resolve,reject)=> {
+        if(rating === "18+" & age < 18){
+            reject("Acesss Denied")
+        }
+        else{
+            reject("Acesss permited u can watch moviee")
+        }
+    },1000);
+}
+
+async function moviecheck(age,rating){
+try{
+    const b = await checkage(age,rating);
+    console.log(b);
+}
+catch(error){
+    console.log(error);
+}
+}
+
+moviecheck(20,"18+");
