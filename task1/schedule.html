@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Events Schedule</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="schedule.css">
+    <script src="schedule.js" defer></script>
 </head>
 <body>
     <header>
-        <div id="top">
-            <img src="images/graduation-cap-icon.webp" alt="graduation cap ">
-            <h1>Campus Events</h1>
+        <nav id="top">
+            <div class="brand-wrapper">
+                <img src="images/graduation-cap-icon.webp" alt="graduation cap" width="40" height="40" id="homefirstimg">
+                <h1>Campus Events</h1>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </button>
             <ul>
                 <li> <a href="home.html"> Home</a></li>
                 <li> <a href="about.html"> About </a></li>
@@ -17,80 +27,88 @@
                 <li> <a href="schedule.html"> Schedule</a></li>
                 <li> <a href="register.html"> Register</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
-    <div>
+    <div class="schedule-header">
         <h1> Event Schedule </h1>
-        <p> Check the dates so taht it could be easy to follw the parricular time for specific events </p>
+        <p> Check the dates and timings so that it is easy to follow the schedule for specific events </p>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="scheduleSearch" placeholder="Search event, date, or venue...">
     </div>
 
     <div id="tabledata">
-        <table>
-            <thead>
-                <tr>
-                    <td> Event Name </td>
-                    <td> Date </td>
-                    <td> Time</td>
-                    <td> Venue </td>
-                    <td> Category</td>
-                    <td> Action </td>
-                </tr>
-            </thead>
-            <tr>
-                <td>Teck Fest 2026 </td>
-                <td>20 oct 2026</td>
-                <td>10:00 AM</td>
-                <td>Auditorium</td>
-                <td>Techinical</td>
-                <td><button>view</button></td>
-            </tr>
-            <tr>
-                <td>Culturals Day  </td>
-                <td>26 oct 2026</td>
-                <td>10:00 AM</td>
-                <td>Ground </td>
-                <td>Non Techinical</td>
-                <td><button>view</button></td>
-            </tr>
-            <tr>
-                <td>Sports day  </td>
-                <td>29 oct 2026</td>
-                <td>10:00 AM</td>
-                <td>Sports Ground</td>
-                <td>Non Techinical</td>
-                <td><button>view</button></td>
-            </tr>
-            <tr>
-                <td>AI Workshop  </td>
-                <td>32 oct 2026</td>
-                <td>10:00 AM</td>
-                <td>Auditorium</td>
-                <td>Techinical</td>
-                <td><button>view</button></td>
-            </tr>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th> Event Name </th>
+                        <th> Date </th>
+                        <th> Time </th>
+                        <th> Venue </th>
+                        <th> Category </th>
+                        <th> Action </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tech Fest 2026 </td>
+                        <td>20 oct 2026</td>
+                        <td>10:00 AM</td>
+                        <td>Auditorium</td>
+                        <td><span class="badge-tech">Technical</span></td>
+                        <td><button type="button"><a href="event-details.html#teckfest">View</a></button></td>
+                    </tr>
+                    <tr>
+                        <td>Culturals Day  </td>
+                        <td>26 oct 2026</td>
+                        <td>10:00 AM</td>
+                        <td>Ground </td>
+                        <td><span class="badge-nontech">Non-Technical</span></td>
+                        <td><button type="button"><a href="event-details.html#culturalsday">View</a></button></td>
+                    </tr>
+                    <tr>
+                        <td>Sports day  </td>
+                        <td>29 oct 2026</td>
+                        <td>10:00 AM</td>
+                        <td>Sports Ground</td>
+                        <td><span class="badge-nontech">Non-Technical</span></td>
+                        <td><button type="button"><a href="event-details.html#sportsday">View</a></button></td>
+                    </tr>
+                    <tr>
+                        <td>AI Workshop  </td>
+                        <td>32 oct 2026</td>
+                        <td>10:00 AM</td>
+                        <td>Auditorium</td>
+                        <td><span class="badge-tech">Technical</span></td>
+                        <td><button type="button"><a href="event-details.html#aiworkshop">View</a></button></td>
+                    </tr>
 
-            <tr>
-                <td>Photography Contest  </td>
-                <td>38 oct 2026</td>
-                <td>10:00 AM</td>
-                <td>Ground</td>
-                <td>Non Techinical</td>
-                <td><button>view</button></td>
-            </tr>
-            <tr>
-                <td>Career Guidence  </td>
-                <td>41 oct 2026</td>
-                <td>10:00 AM</td>
-                <td>Auditorium</td>
-                <td>Techinical</td>
-                <td><button>view</button></td>
-            </tr>
-        </table>
+                    <tr>
+                        <td>Photography Contest  </td>
+                        <td>38 oct 2026</td>
+                        <td>10:00 AM</td>
+                        <td>Ground</td>
+                        <td><span class="badge-nontech">Non-Technical</span></td>
+                        <td><button type="button"><a href="event-details.html#photo">View</a></button></td>
+                    </tr>
+                    <tr>
+                        <td>Career Guidence  </td>
+                        <td>41 oct 2026</td>
+                        <td>10:00 AM</td>
+                        <td>Auditorium</td>
+                        <td><span class="badge-tech">Technical</span></td>
+                        <td><button type="button"><a href="event-details.html#talk">View</a></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <footer>
         <div id="bottom">
-            <img src="images/graduation-cap-icon.webp" alt="" width="50" height="50">
+            <img src="images/graduation-cap-icon.webp" alt="Campus Events Logo" width="50" height="50">
             <h4>Campus Events</h4>
             <p> Bringing students together through learning , creativity and collabration </p>
 
@@ -105,10 +123,10 @@
 
             <h4>Follow Us </h4>
             <ul id="icons">
-                <a href="https://www.facebook.com/">𝐟</a>
-                <a href="https://www.instagram.com/">🅾</a>
-                <a href="https://in.linkedin.com/">🇮🇳</a>
-                <a href="https://www.youtube.com/">▷</a>
+                <a href="https://www.facebook.com/" aria-label="Facebook">𝐟</a>
+                <a href="https://www.instagram.com/" aria-label="Instagram">🅾</a>
+                <a href="https://in.linkedin.com/" aria-label="LinkedIn">🇮🇳</a>
+                <a href="https://www.youtube.com/" aria-label="YouTube">▷</a>
             </ul>
            
             <br>

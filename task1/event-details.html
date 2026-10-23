@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Events Details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="event-details.css">
+    <script src="event-details.js" defer></script>
 </head>
 <body>
     <header>
-        <div id="top">
-            <img src="images/graduation-cap-icon.webp" alt="graduation cap ">
-            <h1>Campus Events</h1>
+        <nav id="top">
+            <div class="brand-wrapper">
+                <img src="images/graduation-cap-icon.webp" alt="graduation cap" width="40" height="40" id="homefirstimg">
+                <h1>Campus Events</h1>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </button>
             <ul>
                 <li> <a href="home.html"> Home</a></li>
                 <li> <a href="about.html"> About </a></li>
@@ -17,10 +27,10 @@
                 <li> <a href="schedule.html"> Schedule</a></li>
                 <li> <a href="register.html"> Register</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
-    <div>
-        <a href="events.html"> <h4><- Back To Events </h4></a>
+    <div class="details-back-bar">
+        <a href="events.html"> <h4>← Back To Events </h4></a>
     </div>
     <div id="allevents">
         <div id="teckfest">
@@ -30,7 +40,7 @@
             <h4> About the Event </h4>
             <p> Techfest is India’s premier international science and technology festival, annually hosted by the Indian Institute of Technology (IIT) Bombay. Established to provide a platform for student community to develop and showcase their technical prowess, it has grown into Asia's largest festival of its kind.
                 The event attracts over 175,000 attendees from across the globe, featuring a diverse lineup of high-octane robotics competitions, cutting-edge tech exhibitions, and hands-on workshops. Renowned scientists, industry leaders, and innovators deliver inspiring keynote lectures. Ultimately, Techfest serves as a vital hub for fostering scientific temper, global networking, and groundbreaking technological innovation.</p>
-            <div id="infoofevents">
+            <div class="infoofevents" id="info-teckfest">
                 <h4>Event Information </h4>
                 <ul>
                     <li> 🗓️ Date : 20 oct 2026</li>
@@ -38,7 +48,7 @@
                     <li> 📍 Venue : Auditorium</li>
                     <li> 🖥️ Category : Techinical Event</li>
                 </ul>
-                <button> <a href="register.html"> Register for this Event -> </a></button>
+                <button type="button"> <a href="register.html?event=tech"> Register for this Event -> </a></button>
             </div>
         </div>
 
@@ -47,17 +57,16 @@
             <p> A celebration of Dancing with music and imersive talent , singing , creative dancing imersing music </p>
             <img src="images/culturals day.jpg" alt="culturals" width="600" height="400">
             <h4> About the Event </h4>
-            <p> Techfest is India’s premier international science and technology festival, annually hosted by the Indian Institute of Technology (IIT) Bombay. Established to provide a platform for student community to develop and showcase their technical prowess, it has grown into Asia's largest festival of its kind.
-            The event attracts over 175,000 attendees from across the globe, featuring a diverse lineup of high-octane robotics competitions, cutting-edge tech exhibitions, and hands-on workshops. Renowned scientists, industry leaders, and innovators deliver inspiring keynote lectures. Ultimately, Techfest serves as a vital hub for fostering scientific temper, global networking, and groundbreaking technological innovation.</p>
-            <div id="infoofevents">
+            <p> Culturals Day brings vibrant energy and celebration to the campus with a spectacular showcase of student talent. From competitive dance performances and choral battles to solo acoustic sets and traditional arts, this festival is designed to foster creative expression and cross-cultural unity across all departments. Join us for a full day of electrifying music, stunning stagecraft, and an unforgettable campus community celebration.</p>
+            <div class="infoofevents" id="info-culturalsday">
                 <h4>Event Information </h4>
                 <ul>
                     <li> 🗓️ Date : 26 oct 2026</li>
-                <   li> ⏰ Time : 10:00 AM to 4:00 PM</li>
+                    <li> ⏰ Time : 10:00 AM to 4:00 PM</li>
                     <li> 📍 Venue : Ground</li>
                     <li> 🖥️ Category : Non Techinical Event</li>
                 </ul>
-                <button> <a href="register.html"> Register for this Event -> </a></button>
+                <button type="button"> <a href="register.html?event=cult"> Register for this Event -> </a></button>
             </div>
         </div>
 
@@ -66,9 +75,8 @@
             <p>competation and sportsmanship will give and amke a better person  </p>
             <img src="images/sports.jpg" alt="sports" width="600" height="400">
             <h4> About the Event </h4>
-            <p> Techfest is India’s premier international science and technology festival, annually hosted by the Indian Institute of Technology (IIT) Bombay. Established to provide a platform for student community to develop and showcase their technical prowess, it has grown into Asia's largest festival of its kind.
-            The event attracts over 175,000 attendees from across the globe, featuring a diverse lineup of high-octane robotics competitions, cutting-edge tech exhibitions, and hands-on workshops. Renowned scientists, industry leaders, and innovators deliver inspiring keynote lectures. Ultimately, Techfest serves as a vital hub for fostering scientific temper, global networking, and groundbreaking technological innovation.</p>
-            <div id="infoofevents">
+            <p> Annual Sports Day highlights dedication, athletic grit, and team spirit among students and faculty alike. Featuring inter-departmental track events, football, basketball, badminton, and relay championships, this high-energy day promotes fitness, sportsmanship, and college pride. Step onto the field and showcase your stamina and teamwork!</p>
+            <div class="infoofevents" id="info-sportsday">
                 <h4>Event Information </h4>
                 <ul>
                     <li> 🗓️ Date : 29 oct 2026</li>
@@ -76,7 +84,7 @@
                     <li> 📍 Venue :  Sports Ground</li>
                     <li> 🖥️ Category : Non Techinical Event</li>
                 </ul>
-                <button> <a href="register.html"> Register for this Event -> </a></button>
+                <button type="button"> <a href="register.html?event=sport"> Register for this Event -> </a></button>
             </div>
         </div>
 
@@ -85,9 +93,8 @@
             <p>competation and Learn about AI and other related things to Ai and use od Ai  </p>
             <img src="images/ai workshop.webp" alt="aiworkshop" width="600" height="400">
             <h4> About the Event </h4>
-            <p> Techfest is India’s premier international science and technology festival, annually hosted by the Indian Institute of Technology (IIT) Bombay. Established to provide a platform for student community to develop and showcase their technical prowess, it has grown into Asia's largest festival of its kind.
-            The event attracts over 175,000 attendees from across the globe, featuring a diverse lineup of high-octane robotics competitions, cutting-edge tech exhibitions, and hands-on workshops. Renowned scientists, industry leaders, and innovators deliver inspiring keynote lectures. Ultimately, Techfest serves as a vital hub for fostering scientific temper, global networking, and groundbreaking technological innovation.</p>
-            <div id="infoofevents">
+            <p> Step into the forefront of modern computing with our intensive AI Workshop. Designed for students and aspiring engineers, this hands-on workshop covers artificial intelligence principles, practical machine learning pipelines, prompt engineering, and neural network fundamentals. Bring your laptops and get ready to build and train your first intelligent models with expert industry mentorship.</p>
+            <div class="infoofevents" id="info-aiworkshop">
                 <h4>Event Information </h4>
                 <ul>
                     <li> 🗓️ Date : 34 oct 2026</li>
@@ -95,7 +102,7 @@
                     <li> 📍 Venue :  Seminar Hall</li>
                     <li> 🖥️ Category : Techinical Event</li>
                 </ul>
-                <button> <a href="register.html"> Register for this Event -> </a></button>
+                <button type="button"> <a href="register.html?event=aiwork"> Register for this Event -> </a></button>
             </div>
         </div>
 
@@ -104,9 +111,8 @@
             <p>Capturing the one the best moments in the ground with creativity  </p>
             <img src="images/photo contest.webp" alt="camera " width="600" height="400">
             <h4> About the Event </h4>
-            <p> Techfest is India’s premier international science and technology festival, annually hosted by the Indian Institute of Technology (IIT) Bombay. Established to provide a platform for student community to develop and showcase their technical prowess, it has grown into Asia's largest festival of its kind.
-            The event attracts over 175,000 attendees from across the globe, featuring a diverse lineup of high-octane robotics competitions, cutting-edge tech exhibitions, and hands-on workshops. Renowned scientists, industry leaders, and innovators deliver inspiring keynote lectures. Ultimately, Techfest serves as a vital hub for fostering scientific temper, global networking, and groundbreaking technological innovation.</p>
-            <div id="infoofevents">
+            <p> Unleash your creative vision through the lens in our Campus Photography Contest. Whether using a DSLR or your smartphone camera, this competition invites photographers of all skill levels to capture authentic stories, candid campus life, portraits, and architectural beauty. Submissions will be exhibited in the central gallery with awards presented by seasoned photographers.</p>
+            <div class="infoofevents" id="info-photo">
                 <h4>Event Information </h4>
                 <ul>
                     <li> 🗓️ Date : 38 oct 2026</li>
@@ -114,18 +120,17 @@
                     <li> 📍 Venue :  Sports Ground</li>
                     <li> 🖥️ Category : Techinical Event</li>
                 </ul>
-                <button> <a href="register.html"> Register for this Event -> </a></button>
+                <button type="button"> <a href="register.html?event=photos"> Register for this Event -> </a></button>
             </div>
         </div>
 
         <div id="talk">
             <h1> Carrer Guidence Talks </h1>
             <p>CTalks with the industry experts and knowing about the industry requirements and what we should build really  </p>
-            <img src="images/photo contest.webp" alt="camera " width="600" height="400">
+            <img src="images/talk.webp" alt="Career Guidance" width="600" height="400">
             <h4> About the Event </h4>
-            <p> Techfest is India’s premier international science and technology festival, annually hosted by the Indian Institute of Technology (IIT) Bombay. Established to provide a platform for student community to develop and showcase their technical prowess, it has grown into Asia's largest festival of its kind.
-            The event attracts over 175,000 attendees from across the globe, featuring a diverse lineup of high-octane robotics competitions, cutting-edge tech exhibitions, and hands-on workshops. Renowned scientists, industry leaders, and innovators deliver inspiring keynote lectures. Ultimately, Techfest serves as a vital hub for fostering scientific temper, global networking, and groundbreaking technological innovation.</p>
-            <div id="infoofevents">
+            <p> Prepare for high-impact careers with our comprehensive Career Guidance Talks. Industry veterans and recruitment directors will share insider perspectives on current hiring trends, portfolio curation, technical interview preparation, and emerging domains. Gain clear direction, ask direct questions in the Q&A sessions, and network with influential professionals.</p>
+            <div class="infoofevents" id="info-talk">
                 <h4>Event Information </h4>
                 <ul>
                     <li> 🗓️ Date : 42 oct 2026</li>
@@ -133,18 +138,16 @@
                     <li> 📍 Venue :  Auditorium</li>
                     <li> 🖥️ Category : Techinical Event</li>
                 </ul>
-                <button> <a href="register.html"> Register for this Event -> </a></button>
+                <button type="button"> <a href="register.html?event=talk"> Register for this Event -> </a></button>
             </div>
         </div>
-
-        
 
     </div>
 
     
     <footer>
         <div id="bottom">
-            <img src="images/graduation-cap-icon.webp" alt="" width="50" height="50">
+            <img src="images/graduation-cap-icon.webp" alt="Campus Events Logo" width="50" height="50">
             <h4>Campus Events</h4>
             <p> Bringing students together through learning , creativity and collabration </p>
 
@@ -159,10 +162,10 @@
 
             <h4>Follow Us </h4>
             <ul id="icons">
-                <a href="https://www.facebook.com/">𝐟</a>
-                <a href="https://www.instagram.com/">🅾</a>
-                <a href="https://in.linkedin.com/">🇮🇳</a>
-                <a href="https://www.youtube.com/">▷</a>
+                <a href="https://www.facebook.com/" aria-label="Facebook">𝐟</a>
+                <a href="https://www.instagram.com/" aria-label="Instagram">🅾</a>
+                <a href="https://in.linkedin.com/" aria-label="LinkedIn">🇮🇳</a>
+                <a href="https://www.youtube.com/" aria-label="YouTube">▷</a>
             </ul>
            
             <br>

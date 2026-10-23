@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Events About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="about.css">
+    <script src="about.js" defer></script>
 </head>
 <body>
     <header>
-        <div id="top">
-            <img src="images/graduation-cap-icon.webp" alt="graduation cap ">
-            <h1>Campus Events</h1>
+        <nav id="top">
+            <div class="brand-wrapper">
+                <img src="images/graduation-cap-icon.webp" alt="graduation cap" width="40" height="40" id="homefirstimg">
+                <h1>Campus Events</h1>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </button>
             <ul>
                 <li> <a href="home.html"> Home</a></li>
                 <li> <a href="about.html"> About </a></li>
@@ -17,11 +27,11 @@
                 <li> <a href="schedule.html"> Schedule</a></li>
                 <li> <a href="register.html"> Register</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
     
     <div id="aboutcampus">
-        <img src="images/aboutpageimg.jpg" alt="">
+        <img src="images/aboutpageimg.jpg" alt="About Campus Events">
         <h1>About Campus Events </h1>
         <p> Take the next step toward your future at the Spring Career & Internship Expo on Thursday, October 22, from 11:00 AM to 3:00 PM in the Student Center Ballroom. This event connects you directly with top employers looking to hire for internships and full-time positions. Recruiters from over 50 companies will be on-site, eager to meet students from all majors. Dress in professional attire, bring multiple copies of your resume, and get ready to network. Your career starts here! </p>
 
@@ -30,33 +40,46 @@
     <div id="ourmission">
         <h3> Our Mission </h3>
         <ul>
-            <li> <h5> 🖥️ Engage Students </h5></li>
-            <p> Provide oppurtinuty to explore and learn new things</p>
-            <li> <h5> 👥 Build Community </h5></li>
-            <p> Connect students across departements </p>
-            <li> <h5> 🏆 Create Opportunities </h5></li>
-            <p> Organise meaningfull events and experiements throughout the year </p>
-
+            <li>
+                <h5> 🖥️ Engage Students </h5>
+                <p> Provide oppurtinuty to explore and learn new things</p>
+            </li>
+            <li>
+                <h5> 👥 Build Community </h5>
+                <p> Connect students across departements </p>
+            </li>
+            <li>
+                <h5> 🏆 Create Opportunities </h5>
+                <p> Organise meaningfull events and experiements throughout the year </p>
+            </li>
         </ul>
     </div>
 
     <div id="eventtype">
         <h3> Our Event Types </h3>
-         <ul>
-            <li><h5>  🖥️ Techinical  </h5></li>
-            <p> Hackathons Tecktalks etc...</p>
-            <li><h5>  🎶 Cultural  </h5></li>
-            <p> Music Dance Art etccc...</p>
-            <li><h5>  🏆 Sports </h5></li>
-            <p> intra or inter college sports </p>
-            <li><h5>  📝 Workshops  </h5></li>
-            <p> Skill Development and Industry sessions</p>
+        <ul>
+            <li>
+                <h5> 🖥️ Techinical </h5>
+                <p> Hackathons Tecktalks etc...</p>
+            </li>
+            <li>
+                <h5> 🎶 Cultural </h5>
+                <p> Music Dance Art etccc...</p>
+            </li>
+            <li>
+                <h5> 🏆 Sports </h5>
+                <p> intra or inter college sports </p>
+            </li>
+            <li>
+                <h5> 📝 Workshops </h5>
+                <p> Skill Development and Industry sessions</p>
+            </li>
         </ul>
     </div>
 
     <footer>
         <div id="bottom">
-            <img src="images/graduation-cap-icon.webp" alt="" width="50" height="50">
+            <img src="images/graduation-cap-icon.webp" alt="Campus Events Logo" width="50" height="50">
             <h4>Campus Events</h4>
             <p> Bringing students together through learning , creativity and collabration </p>
 
@@ -71,10 +94,10 @@
 
             <h4>Follow Us </h4>
             <ul id="icons">
-                <a href="https://www.facebook.com/">𝐟</a>
-                <a href="https://www.instagram.com/">🅾</a>
-                <a href="https://in.linkedin.com/">🇮🇳</a>
-                <a href="https://www.youtube.com/">▷</a>
+                <a href="https://www.facebook.com/" aria-label="Facebook">𝐟</a>
+                <a href="https://www.instagram.com/" aria-label="Instagram">🅾</a>
+                <a href="https://in.linkedin.com/" aria-label="LinkedIn">🇮🇳</a>
+                <a href="https://www.youtube.com/" aria-label="YouTube">▷</a>
             </ul>
 
             <br>
