@@ -30,21 +30,9 @@
         const usertable = document.getElementById("usertable");
         const status = document.getElementById("status");
 
-        async function fetchuser() {
-            status.textContent = "Loading Users ...";
-            loadbtn.disable = true;
+        function displayuser(users){
             usertable.innerHTML = "";
-
-            try {
-                const response = await fetch(
-                    "https://dummyjson.com/products"
-                );
-                if(!response.ok){
-                    throw new Error("Failed to fetch users");
-                }
-                const users=await response.json();
-
-                users.products.forEach((user) =>{
+            users.products.forEach((user) =>{
                     const row = document.createElement("tr");
 
                     row.innerHTML = `
@@ -56,6 +44,26 @@
 
                     usertable.appendChild(row);
                 });
+        }
+        async function fetchuser() {
+            status.textContent = "Loading Users ...";
+            loadbtn.disabled = true;
+            usertable.innerHTML = "";
+
+
+            try {
+                const response = await fetch(
+                    "https://dummyjson.com/products"
+                );
+                if(!response.ok){
+                    throw new Error("Failed to fetch users");
+                }
+                const users=await response.json();
+
+
+                localStorage.setItem("users",JSON.stringify(users));
+                displayuser(users);
+
                 status.textContent = "Users loaded sucesfully ";
             }
             catch(error){
@@ -65,9 +73,22 @@
             finally{
                 loadbtn.disabled = false;
             }
-        }
+        
 
-        loadbtn.addEventListener("click",fetchuser);
+
+        function loadSavedUsers(){
+            const savedUsers = localStorage.getItem("users");
+            if(savedUsers){
+                displayuser(JSON.parse(savedUsers));
+                status.textContent = "users loaded from local strg";
+            }
+            else{
+                status.textContent = "Click load users to fetch data "
+            }
+        }
+    }
+        loadbtn.addEventListener("click", fetchuser);
+
     </script>
 </body>
 </html>

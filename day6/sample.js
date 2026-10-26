@@ -89,7 +89,7 @@ checkmoney(1000,5000);
 
 function checkage(age,rating){
     return new Promise ((resolve,reject)=> {
-        if(rating === "18+" & age < 18){
+        if(rating === "18+" && age < 18){
             reject("Acesss Denied")
         }
         else{
@@ -108,4 +108,4 @@ catch(error){
 }
 }
 
-moviecheck(20,"18+");
+moviecheck(10,"18+");
