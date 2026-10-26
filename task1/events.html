@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Events Page</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="events.css">
+    <script src="events.js" defer></script>
 </head>
 <body>
     <header>
-        <div id="top">
-            <img src="images/graduation-cap-icon.webp" alt="graduation cap ">
-            <h1>Campus Events</h1>
+        <nav id="top">
+            <div class="brand-wrapper">
+                <img src="images/graduation-cap-icon.webp" alt="graduation cap" width="40" height="40" id="homefirstimg">
+                <h1>Campus Events</h1>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </button>
             <ul>
                 <li> <a href="home.html"> Home</a></li>
                 <li> <a href="about.html"> About </a></li>
@@ -18,72 +27,91 @@
                 <li> <a href="schedule.html"> Schedule</a></li>
                 <li> <a href="register.html"> Register</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
 
     <div id="eventslist">
         <h1>All Events </h1>
         <p> Explore upcoming events and be part of it </p>
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="technical">Technical</button>
+            <button class="filter-btn" data-filter="cultural">Cultural</button>
+            <button class="filter-btn" data-filter="sports">Sports</button>
+            <button class="filter-btn" data-filter="workshops">Workshops</button>
+        </div>
         <div id="eventcards">
-            <div >
-                <img src="images/teckfest.jpg" alt="" width="300" height="300">
-                <h4> Teck Test 26</h4>
-                <p> ⏱️ 20 oct 2026</p>
-                <p> 📍 Auditorium </p>
-                <p> coding , inovations and hackathons </p>
-                <button> <a href="event-details.html"> View Details -></a></button>
+            <div class="event-card" data-category="technical">
+                <img src="images/teckfest.jpg" alt="Tech Fest" width="300" height="300">
+                <div class="card-body">
+                    <h4> Teck Fest 26</h4>
+                    <p> ⏱️ 20 oct 2026</p>
+                    <p> 📍 Auditorium </p>
+                    <p> coding , inovations and hackathons </p>
+                    <button type="button"> <a href="event-details.html#teckfest"> View Details -></a></button>
+                </div>
             </div>
             
-            <div>
-                <img src="images/culturals day.jpg" alt="" width="300" height="300">
-                <h4> Culturals Day</h4>
-                <p> ⏱️ 26 oct 2026</p>
-                <p> 📍 Ground </p>
-                <p> talent , singing , creative dancing imersing music </p>
-                <button> <a href="event-details.html"> View Details -></a></button>
+            <div class="event-card" data-category="cultural">
+                <img src="images/culturals day.jpg" alt="Culturals Day" width="300" height="300">
+                <div class="card-body">
+                    <h4> Culturals Day</h4>
+                    <p> ⏱️ 26 oct 2026</p>
+                    <p> 📍 Ground </p>
+                    <p> talent , singing , creative dancing imersing music </p>
+                    <button type="button"> <a href="event-details.html#culturalsday"> View Details -></a></button>
+                </div>
             </div>
             
-            <div>
+            <div class="event-card" data-category="sports">
                 <img src="images/sports.jpg" alt="sports" width="300" height="300">
-                <h4> Sports Day</h4>
-                <p> ⏱️ 29 oct 2026</p>
-                <p> 📍 Sports Ground </p>
-                <p> competation and sportsmanship </p>
-                <button> <a href="event-details.html"> View Details -></a></button>
+                <div class="card-body">
+                    <h4> Sports Day</h4>
+                    <p> ⏱️ 29 oct 2026</p>
+                    <p> 📍 Sports Ground </p>
+                    <p> competation and sportsmanship </p>
+                    <button type="button"> <a href="event-details.html#sportsday"> View Details -></a></button>
+                </div>
             </div>
             
 
-            <div>
+            <div class="event-card" data-category="workshops">
                 <img src="images/ai workshop.webp" alt="workshop" width="300" height="300">
-                <h4> AI Workshop </h4>
-                <p> ⏱️ 34 oct 2026</p>
-                <p> 📍 Seminal Hall </p>
-                <p> Learn about AI and other related things to Ai and use od Ai  </p>
-                <button> <a href="event-details.html"> View Details -></a></button>
+                <div class="card-body">
+                    <h4> AI Workshop </h4>
+                    <p> ⏱️ 34 oct 2026</p>
+                    <p> 📍 Seminal Hall </p>
+                    <p> Learn about AI and other related things to Ai and use od Ai  </p>
+                    <button type="button"> <a href="event-details.html#aiworkshop"> View Details -></a></button>
+                </div>
             </div>
 
-            <div>
+            <div class="event-card" data-category="cultural">
                 <img src="images/photo contest.webp" alt="camera" width="300" height="300">
-                <h4> Photography Contest </h4>
-                <p> ⏱️ 38 oct 2026</p>
-                <p> 📍 Sports Ground </p>
-                <p> Capturing the one the best moments in the ground with creativity  </p>
-                <button> <a href="event-details.html"> View Details -></a></button>
+                <div class="card-body">
+                    <h4> Photography Contest </h4>
+                    <p> ⏱️ 38 oct 2026</p>
+                    <p> 📍 Sports Ground </p>
+                    <p> Capturing the one the best moments in the ground with creativity  </p>
+                    <button type="button"> <a href="event-details.html#photo"> View Details -></a></button>
+                </div>
             </div>
 
-            <div>
+            <div class="event-card" data-category="workshops">
                 <img src="images/talk.webp" alt="talks" width="300" height="300">
-                <h4> Career Guidence Talk</h4>
-                <p> ⏱️ 42 oct 2026</p>
-                <p> 📍 Auditorium  </p>
-                <p> Talks with the industry experts and knowing about the industry requirements and what we should build really  </p>
-                <button> <a href="event-details.html"> View Details -></a></button>
+                <div class="card-body">
+                    <h4> Career Guidence Talk</h4>
+                    <p> ⏱️ 42 oct 2026</p>
+                    <p> 📍 Auditorium  </p>
+                    <p> Talks with the industry experts and knowing about the industry requirements and what we should build really  </p>
+                    <button type="button"> <a href="event-details.html#talk"> View Details -></a></button>
+                </div>
             </div>
         </div>
     </div>
     <footer>
         <div id="bottom">
-            <img src="images/graduation-cap-icon.webp" alt="" width="50" height="50">
+            <img src="images/graduation-cap-icon.webp" alt="Campus Events Logo" width="50" height="50">
             <h4>Campus Events</h4>
             <p> Bringing students together through learning , creativity and collabration </p>
 
@@ -98,10 +126,10 @@
 
             <h4>Follow Us </h4>
             <ul id="icons">
-                <a href="https://www.facebook.com/">𝐟</a>
-                <a href="https://www.instagram.com/">🅾</a>
-                <a href="https://in.linkedin.com/">🇮🇳</a>
-                <a href="https://www.youtube.com/">▷</a>
+                <a href="https://www.facebook.com/" aria-label="Facebook">𝐟</a>
+                <a href="https://www.instagram.com/" aria-label="Instagram">🅾</a>
+                <a href="https://in.linkedin.com/" aria-label="LinkedIn">🇮🇳</a>
+                <a href="https://www.youtube.com/" aria-label="YouTube">▷</a>
             </ul>
            
             <br>

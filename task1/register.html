@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Events Register </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="register.css">
+    <script src="register.js" defer></script>
 </head>
 <body>
     <header>
-        <div id="top">
-            <img src="images/graduation-cap-icon.webp" alt="graduation cap ">
-            <h1>Campus Events</h1>
+        <nav id="top">
+            <div class="brand-wrapper">
+                <img src="images/graduation-cap-icon.webp" alt="graduation cap" width="40" height="40" id="homefirstimg">
+                <h1>Campus Events</h1>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </button>
             <ul>
                 <li> <a href="home.html"> Home</a></li>
                 <li> <a href="about.html"> About </a></li>
@@ -17,51 +27,51 @@
                 <li> <a href="schedule.html"> Schedule</a></li>
                 <li> <a href="register.html"> Register</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
 
     <div id="eventreg">
         <h1>Event Registration </h1>
         <p>Fill the form for the upcoming Events </p>
         <div id="regform">
-            <form>
+            <div class="form-feedback success" id="formFeedback" style="display: none;"></div>
+            <form id="registrationForm" novalidate>
                 <label for="fullname"> Full name</label>
-                <input type="text" id="fullname" name="fullname" minlength="2" maxlength="60" required>
+                <input type="text" id="fullname" name="fullname" minlength="2" maxlength="60" placeholder="e.g. Alex Johnson" required>
 
                 <label for="email" > Email</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" placeholder="e.g. alex@campus.edu" required>
 
                 <label for="phone"> Phone Number</label>
-                <input type="number" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Enter a 10 digit number" required >
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Enter a 10 digit number" maxlength="10" required>
 
-                <label for="event"> Choose The Event</label>
-                    <select name="course" id="eventss" required>
-                        <option value=""> Choose the Event </option>
-                        <option value="tech"> Tech fest 2026 </option>
-                        <option value="cult"> Culturals</option>
-                        <option value="sport"> Sports Day</option>
-                        <option value="aiwork"> AI Workshop</option>
-                        <option value="photos"> Photography Contest </option>
-                        <option value="talk"> Carrer Guidence Talks</option>
-                    </select>
+                <label for="eventss"> Choose The Event</label>
+                <select name="course" id="eventss" required>
+                    <option value=""> Choose the Event </option>
+                    <option value="tech"> Tech fest 2026 </option>
+                    <option value="cult"> Culturals</option>
+                    <option value="sport"> Sports Day</option>
+                    <option value="aiwork"> AI Workshop</option>
+                    <option value="photos"> Photography Contest </option>
+                    <option value="talk"> Carrer Guidence Talks</option>
+                </select>
 
                 <fieldset>
-                    <legend>Terms and Condition</legend>
+                    <legend>Terms and Conditions</legend>
                     <label for="terms">
-                        <input type="checkbox" id="terms" name="terms" value="accept" >
+                        <input type="checkbox" id="terms" name="terms" value="accept" required>
+                        I agree to the campus event rules and code of conduct
                     </label>
                 </fieldset>
 
                 <button type="submit"> Register</button>
-
-
             </form>
         </div>
     </div>
 
     <footer>
         <div id="bottom">
-            <img src="images/graduation-cap-icon.webp" alt="" width="50" height="50">
+            <img src="images/graduation-cap-icon.webp" alt="Campus Events Logo" width="50" height="50">
             <h4>Campus Events</h4>
             <p> Bringing students together through learning , creativity and collabration </p>
 
@@ -76,10 +86,10 @@
 
             <h4>Follow Us </h4>
             <ul id="icons">
-                <a href="https://www.facebook.com/">𝐟</a>
-                <a href="https://www.instagram.com/">🅾</a>
-                <a href="https://in.linkedin.com/">🇮🇳</a>
-                <a href="https://www.youtube.com/">▷</a>
+                <a href="https://www.facebook.com/" aria-label="Facebook">𝐟</a>
+                <a href="https://www.instagram.com/" aria-label="Instagram">🅾</a>
+                <a href="https://in.linkedin.com/" aria-label="LinkedIn">🇮🇳</a>
+                <a href="https://www.youtube.com/" aria-label="YouTube">▷</a>
             </ul>
            
             <br>

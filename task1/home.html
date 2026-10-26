@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="home.css">
-    <script src="home.js"> </script>
+    <script src="home.js" defer></script>
 </head>
 <body>
     <header>
         <nav id="top">
-            <img src="images/graduation-cap-icon.webp" alt="graduation cap " width="40" height="40" id="homefirstimg">
-            <h1>Campus Events</h1>
+            <div class="brand-wrapper">
+                <img src="images/graduation-cap-icon.webp" alt="graduation cap" width="40" height="40" id="homefirstimg">
+                <h1>Campus Events</h1>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </button>
             <ul>
                 <li> <a href="home.html"> Home</a></li>
                 <li> <a href="about.html"> About </a></li>
@@ -27,7 +35,7 @@
         <div id="homeimg_words">
             <h1> Discover. Participate. Grow. </h1>
             <p>
-                Explore execting technical, cultural, sports and academic economic events happening on our campus.
+                Explore exciting technical, cultural, sports and academic events happening on our campus.
             </p>
             <button type="button"><a href="events.html"> Explore Events</a> </button>
         </div>
@@ -36,39 +44,54 @@
     <div id="featurs">
         <h2>Featured Events</h2>
         <a href="events.html"> View All Events -> </a>
-        <div id="cards" >
-            <img src="images/teckfest.jpg" alt="teck fest" width="300" height="300">
-            <h4>Tech Fest 2026 </h4>
-            <p> ⏱️ 20 oct 2026</p>
-            <p> 📍 Auditorium </p>
-            <p> coding , inovations and hackathons </p>
+        <div id="cards">
+            <div class="event-card">
+                <img src="images/teckfest.jpg" alt="teck fest" width="300" height="300">
+                <div class="card-body">
+                    <h4>Tech Fest 2026 </h4>
+                    <p> ⏱️ 20 oct 2026</p>
+                    <p> 📍 Auditorium </p>
+                    <p> coding , inovations and hackathons </p>
+                    <button type="button"><a href="event-details.html#teckfest">View Details -></a></button>
+                </div>
+            </div>
 
-            <img src="images/culturals day.jpg" alt="cultural image" width="300" height="300">
-            <h4>Culturals Day</h4>
-            <p> ⏱️ 26 oct 2026</p>
-            <p> 📍 Ground </p>
-            <p> talent , singing , creative dancing imersing music</p>
+            <div class="event-card">
+                <img src="images/culturals day.jpg" alt="cultural image" width="300" height="300">
+                <div class="card-body">
+                    <h4>Culturals Day</h4>
+                    <p> ⏱️ 26 oct 2026</p>
+                    <p> 📍 Ground </p>
+                    <p> talent , singing , creative dancing imersing music</p>
+                    <button type="button"><a href="event-details.html#culturalsday">View Details -></a></button>
+                </div>
+            </div>
 
-            <img src="images/sports.jpg" alt="sports" width="300" height="300">
-            <h4> Sports Day </h4>
-            <p> ⏱️ 29 oct 2026</p>
-            <p> 📍 Sports Ground </p>
-            <p> competation and sportsmanship </p>
+            <div class="event-card">
+                <img src="images/sports.jpg" alt="sports" width="300" height="300">
+                <div class="card-body">
+                    <h4> Sports Day </h4>
+                    <p> ⏱️ 29 oct 2026</p>
+                    <p> 📍 Sports Ground </p>
+                    <p> competation and sportsmanship </p>
+                    <button type="button"><a href="event-details.html#sportsday">View Details -></a></button>
+                </div>
+            </div>
         </div>
     </div>
 
     <div id="eventcat">
         <ul>
-            <li><h5>  🖥️ Techinical Events </h5></li>
-            <li><h5>  🎶 Cultural Events </h5></li>
-            <li><h5>  🏆 Sports Events </h5></li>
-            <li><h5>  📝 Workshops Events </h5></li>
+            <li><h5> 🖥️ Technical Events </h5></li>
+            <li><h5> 🎶 Cultural Events </h5></li>
+            <li><h5> 🏆 Sports Events </h5></li>
+            <li><h5> 📝 Workshops Events </h5></li>
         </ul>
     </div>
 
     <footer>
         <div id="bottom">
-            <img src="images/graduation-cap-icon.webp" alt="" width="50" height="50">
+            <img src="images/graduation-cap-icon.webp" alt="Campus Events Logo" width="50" height="50">
             <h4>Campus Events</h4>
             <p> Bringing students together through learning , creativity and collabration </p>
 
@@ -83,10 +106,10 @@
 
             <h4>Follow Us </h4>
             <ul id="icons">
-                <a href="https://www.facebook.com/">𝐟</a>
-                <a href="https://www.instagram.com/">🅾</a>
-                <a href="https://in.linkedin.com/">🇮🇳</a>
-                <a href="https://www.youtube.com/">▷</a>
+                <a href="https://www.facebook.com/" aria-label="Facebook">𝐟</a>
+                <a href="https://www.instagram.com/" aria-label="Instagram">🅾</a>
+                <a href="https://in.linkedin.com/" aria-label="LinkedIn">🇮🇳</a>
+                <a href="https://www.youtube.com/" aria-label="YouTube">▷</a>
             </ul>
            
             <br>
