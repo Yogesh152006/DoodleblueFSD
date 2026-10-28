@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 15px;
+  background: linear-gradient(120deg, #438f89, #00536c);
+}
+
+.billing-form {
+  width: 100%;
+  max-width: 370px;
+  padding: 25px 20px;
+  background: #f5f5f5;
+  border-radius: 38px;
+}
+
+.billing-form h2 {
+  text-align: center;
+  color: #222;
+  margin: 0 0 22px;
+  font-size: 27px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin: 0 0 7px 12px;
+  color: #777;
+  font-size: 14px;
+}
+
+.form-input {
+  width: 100%;
+  min-height: 48px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  padding: 12px 18px;
+  background: #e7e7e7;
+  color: #444;
+  font: inherit;
+}
+
+.form-input:focus {
+  box-shadow: 0 0 0 2px #69aaa3;
+}
+
+.select-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.select-row select {
+  cursor: pointer;
+}
+
+.address-input {
+  height: 115px;
+  resize: vertical;
+  border-radius: 22px;
+}
+
+.policy {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0 18px;
+  color: #777;
+  font-size: 14px;
+}
+
+.policy input {
+  accent-color: #327e79;
+}
+
+.form-button {
+  width: 100%;
+  min-height: 54px;
+  border: none;
+  border-radius: 28px;
+  background: linear-gradient(100deg, #388b80, #00516c);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  opacity: 0.9;
+}
+
+.error {
+  margin: 5px 10px 0;
+  color: #d93025;
+  font-size: 12px;
+}
+
+@media (max-width: 400px) {
+  .billing-form {
+    padding: 22px 15px;
+  }
+
+  .select-row {
+    gap: 8px;
+  }
+}
