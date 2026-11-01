@@ -1,0 +1,104 @@
+{
+  "students": [
+    {
+      "id": "STU-1001",
+      "studentId": "STU-1001",
+      "name": "Alex Johnson",
+      "email": "alex.johnson@campus.edu",
+      "phone": "9876543210",
+      "gender": "Male",
+      "dob": "2003-04-15",
+      "department": "Computer Science",
+      "course": "B.Tech Computer Science",
+      "year": "3rd Year",
+      "address": "104 University Park, Renovated Suite 4B",
+      "createdAt": "2026-11-01T16:44:05.616Z"
+    },
+    {
+      "id": "STU-1002",
+      "studentId": "STU-1002",
+      "name": "Sophia Martinez",
+      "email": "sophia.m@campus.edu",
+      "phone": "9876543211",
+      "gender": "Female",
+      "dob": "2004-08-22",
+      "department": "Electrical Engineering",
+      "course": "B.Tech Electrical",
+      "year": "2nd Year",
+      "address": "302 Westview Dorms, Campus South",
+      "createdAt": "2026-11-01T16:44:05.618Z"
+    },
+    {
+      "id": "STU-1003",
+      "studentId": "STU-1003",
+      "name": "David Kim",
+      "email": "david.kim@campus.edu",
+      "phone": "9876543212",
+      "gender": "Male",
+      "dob": "2002-11-05",
+      "department": "Mechanical Engineering",
+      "course": "B.Tech Mechanical",
+      "year": "4th Year",
+      "address": "15 Maple St, Academic Block B",
+      "createdAt": "2026-11-01T16:44:05.618Z"
+    },
+    {
+      "id": "STU-1004",
+      "studentId": "STU-1004",
+      "name": "Emily Patel",
+      "email": "emily.patel@campus.edu",
+      "phone": "9876543213",
+      "gender": "Female",
+      "dob": "2005-01-30",
+      "department": "Business Administration",
+      "course": "BBA Management",
+      "year": "1st Year",
+      "address": "88 Riverside Hall, Campus East",
+      "createdAt": "2026-11-01T16:44:05.618Z"
+    }
+  ],
+  "teachers": [
+    {
+      "id": "TCH-2001",
+      "teacherId": "TCH-2001",
+      "name": "Dr. Sarah Mitchell",
+      "email": "sarah.mitchell@campus.edu",
+      "phone": "9876501234",
+      "gender": "Female",
+      "department": "Computer Science",
+      "subject": "Algorithms & Data Structures",
+      "qualification": "Ph.D. in Computer Science",
+      "experience": "12",
+      "address": "45 Faculty Avenue, Campus West",
+      "createdAt": "2026-11-01T16:44:05.729Z"
+    },
+    {
+      "id": "TCH-2002",
+      "teacherId": "TCH-2002",
+      "name": "Prof. Robert Chen",
+      "email": "robert.chen@campus.edu",
+      "phone": "9876501235",
+      "gender": "Male",
+      "department": "Electrical Engineering",
+      "subject": "Signals & Embedded Systems",
+      "qualification": "M.Tech, Ph.D.",
+      "experience": "9",
+      "address": "12 Pine View Quarters, Campus North",
+      "createdAt": "2026-11-01T16:44:05.729Z"
+    },
+    {
+      "id": "TCH-2003",
+      "teacherId": "TCH-2003",
+      "name": "Dr. Amanda White",
+      "email": "amanda.white@campus.edu",
+      "phone": "9876501236",
+      "gender": "Female",
+      "department": "Business Administration",
+      "subject": "Corporate Finance & Marketing",
+      "qualification": "Ph.D. in Business Economics",
+      "experience": "15",
+      "address": "22 University Towers, Campus Center",
+      "createdAt": "2026-11-01T16:44:05.729Z"
+    }
+  ]
+}
