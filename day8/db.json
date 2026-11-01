@@ -1,0 +1,26 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "John",
+      "email": "john@gmail.com",
+      "department": "CSE",
+      "year": "2nd Year"
+    },
+    {
+      "id": "2",
+      "name": "David",
+      "email": "david@gmail.com",
+      "department": "ECE",
+      "year": "3rd Year"
+    },
+    {
+      "name": "Aurther Morgan",
+      "email": "morgangoodman@gmail.com",
+      "department": "aiml",
+      "year": "1st Year",
+      "id": "fRhSVd3xEY4"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
