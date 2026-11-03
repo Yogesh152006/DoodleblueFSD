@@ -20,6 +20,13 @@
       "department": "aiml",
       "year": "1st Year",
       "id": "fRhSVd3xEY4"
+    },
+    {
+      "name": "Govindhan",
+      "email": "gobinda@gmail.com",
+      "department": "aiml",
+      "year": "4th Year",
+      "id": "UmJXWXJkpVg"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
