@@ -3,13 +3,7 @@ import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  UserPlus,
-  Users,
-  Mail,
-  CalendarDays,
-  Star,
-} from "lucide-react";
+import { UserPlus, Users } from "lucide-react";
 
 import DataTable from "../components/common/DataTable";
 import FormField from "../components/common/FormField";
@@ -18,13 +12,12 @@ import { studentSchema } from "../components/common/validation";
 import {
   addStudent,
   fetchStudents,
-  clearStudentError,
 } from "../features/students/studentSlice";
 
 export default function StudentsPage() {
   const dispatch = useDispatch();
 
-  const { items, status, error, usingDemo } = useSelector(
+  const { items, status, error } = useSelector(
     (s) => s.students
   );
 
@@ -117,13 +110,6 @@ export default function StudentsPage() {
         </div>
       </div>
 
-      {usingDemo && (
-        <div className="notice">
-          Backend is unavailable. Showing sample data; add
-          operations require the API to be running.
-        </div>
-      )}
-
       <div className="student-layout">
         <aside className="panel add-panel">
           <div className="form-title">
@@ -200,9 +186,7 @@ export default function StudentsPage() {
               />
             </FormField>
 
-            {error && !usingDemo && (
-              <p className="field-error">{error}</p>
-            )}
+            {error && <p className="field-error">{error}</p>}
 
             <button
               className="btn btn-primary full-width"
@@ -246,6 +230,9 @@ export default function StudentsPage() {
         <p className="loading-note">
           Loading student directory…
         </p>
+      )}
+      {status === "failed" && (
+        <p className="field-error page-error">{error}</p>
       )}
     </>
   );

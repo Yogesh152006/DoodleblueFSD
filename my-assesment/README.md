@@ -1,6 +1,20 @@
-# React + Vite
+# Student and Teacher Directory
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The Vite frontend uses JSON Server for student and teacher records.
+
+## Start the project
+
+Install dependencies once with `npm install`. Start the backend and frontend in separate terminals from this folder:
+
+```sh
+npm run server
+```
+
+```sh
+npm run dev
+```
+
+JSON Server reads and persists data in `db.json` at `http://localhost:3000`. The Vite app runs at the URL printed by the dev server.
 
 Currently, two official plugins are available:
 

@@ -1,0 +1,37 @@
+{
+  "students": [
+    {
+      "cgpa": 9.8,
+      "year": "Year 4",
+      "department": "Chemistry",
+      "email": "dinesraj@gmail.com",
+      "fullName": "dineshraj A",
+      "id": 1
+    },
+    {
+      "cgpa": 9.4,
+      "year": "Year 4",
+      "department": "Computer Science",
+      "email": "dineshkumarvi@gmail.com",
+      "fullName": "Dineshkumar V",
+      "id": 2
+    },
+    {
+      "cgpa": 10,
+      "year": "Year 4",
+      "department": "Biology",
+      "email": "aravindlumar@gmail.com",
+      "fullName": "Arivandan J",
+      "id": 3
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Aurther Morgan",
+      "email": "morgangoodman@gmail.com",
+      "department": "Physics",
+      "subject": "Gun",
+      "id": 1
+    }
+  ]
+}

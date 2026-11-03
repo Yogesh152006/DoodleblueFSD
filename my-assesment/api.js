@@ -1,18 +1,53 @@
-import axios from "axios";
+const API_BASE_URL =
+	import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
 
-const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api",
-  timeout: 15000,
-  headers: { "Content-Type": "application/json" }
-});
+async function request(path, { method = "GET", body } = {}) {
+	let response;
 
-api.interceptors.response.use(
-  response => response,
-  error => {
-    const message = error.response?.data?.message || error.response?.data?.error ||
-      error.message || "Something went wrong while contacting the server.";
-    return Promise.reject(new Error(message));
-  }
-);
+	try {
+		response = await fetch(`${API_BASE_URL}${path}`, {
+			method,
+			headers: body === undefined ? undefined : { "Content-Type": "application/json" },
+			body: body === undefined ? undefined : JSON.stringify(body),
+		});
+	} catch (error) {
+		if (error instanceof TypeError) {
+			throw new Error(
+				`Cannot connect to JSON Server at ${API_BASE_URL}. Start it with "npm run server".`,
+				{ cause: error },
+			);
+		}
+
+		throw error;
+	}
+
+	const text = response.status === 204 ? "" : await response.text();
+	let data = null;
+
+	if (text) {
+		try {
+			data = JSON.parse(text);
+		} catch {
+			data = text;
+		}
+	}
+
+	if (!response.ok) {
+		const details =
+			typeof data === "string" ? data : data?.message || data?.error;
+		throw new Error(
+			details || `Request failed (${response.status} ${response.statusText})`,
+		);
+	}
+
+	return { data };
+}
+
+const api = {
+	get: (path) => request(path),
+	post: (path, body) => request(path, { method: "POST", body }),
+	put: (path, body) => request(path, { method: "PUT", body }),
+	delete: (path) => request(path, { method: "DELETE" }),
+};
 
 export default api;

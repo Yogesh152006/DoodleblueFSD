@@ -1,7 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import api from "..//..//..//api";
-import { demoStudents } from "../../data/options";
-import { normalizeStudent, unwrapList } from "..//..//utils/normalize";
+import api from "../../../api";
+import { normalizeStudent, unwrapList } from "../../utils/normalize";
 
 export const fetchStudents = createAsyncThunk(
   "students/fetch",
@@ -10,10 +9,7 @@ export const fetchStudents = createAsyncThunk(
       const { data } = await api.get("/students");
       return unwrapList(data, "students").map(normalizeStudent);
     } catch (error) {
-      return thunkAPI.rejectWithValue({
-        message: error.message,
-        useDemo: true,
-      });
+      return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
@@ -37,7 +33,6 @@ const slice = createSlice({
     items: [],
     status: "idle",
     error: null,
-    usingDemo: false,
   },
 
   reducers: {
@@ -55,15 +50,11 @@ const slice = createSlice({
       .addCase(fetchStudents.fulfilled, (s, a) => {
         s.status = "succeeded";
         s.items = a.payload;
-        s.usingDemo = false;
       })
 
       .addCase(fetchStudents.rejected, (s, a) => {
-        s.status = "succeeded";
-        s.items = demoStudents;
-        s.usingDemo = true;
-        s.error =
-          a.payload?.message || "API unavailable — showing demo data.";
+        s.status = "failed";
+        s.error = a.payload || "Could not load students.";
       })
 
       .addCase(addStudent.fulfilled, (s, a) => {

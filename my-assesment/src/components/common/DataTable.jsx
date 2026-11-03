@@ -30,7 +30,7 @@ export default function DataTable({
   });
   const [page, setPage] = useState(1);
 
-  const debouncedSearch = useDebounce(search, 350);
+  const debouncedSearch = useDebounce(search, 1000);
 
   const filtered = useMemo(() => {
     let result = rows.filter((row) => {
@@ -136,7 +136,7 @@ export default function DataTable({
 
         {filters.map((f) => (
           <label className="toolbar-filter" key={f.key}>
-            <span>{f.label}</span>
+            {/* <span>{f.label}</span> */}
 
             <select
               value={filterValues[f.key] || ""}

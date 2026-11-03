@@ -26,7 +26,7 @@ const blank = {
 export default function TeachersPage() {
   const dispatch = useDispatch();
 
-  const { items, status, error, usingDemo } = useSelector(
+  const { items, status, error } = useSelector(
     (s) => s.teachers
   );
 
@@ -157,13 +157,6 @@ export default function TeachersPage() {
         </div>
       </div>
 
-      {usingDemo && (
-        <div className="notice">
-          Backend is unavailable. Showing sample data. Create, edit and
-          delete actions require the API.
-        </div>
-      )}
-
       <DataTable
         title="Teacher Directory"
         subtitle="Search and manage teacher details."
@@ -186,7 +179,7 @@ export default function TeachersPage() {
         <p className="loading-note">Loading teacher directory…</p>
       )}
 
-      {error && !usingDemo && (
+      {error && (
         <p className="field-error page-error">{error}</p>
       )}
 
